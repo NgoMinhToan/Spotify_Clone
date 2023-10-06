@@ -1,0 +1,8 @@
+export const SEARCH_URL = '/search'
+export const PLAYBACK_STATE = '/me/player'
+export const PLAYBACK_CONTROLLER_PLAY = '/me/player/play'
+export const PLAYBACK_CONTROLLER_PAUSE = '/me/player/pause'
+export const PLAYBACK_CONTROLLER_TOGGLE = '/me/player/toggle'
+export const PLAYBACK_CONTROLLER_NEXT = '/me/player/next'
+export const PLAYBACK_CONTROLLER_PREVIOUS = '/me/player/previous'
+export const PLAYBACK_CONTROLLER_SEEK = '/me/player/seek'

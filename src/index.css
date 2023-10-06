@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn:not(:disabled) {
+  &.btn-filled {
+    @apply text-white bg-green-500;
+    
+    &:hover {
+      @apply text-white bg-green-700;
+    }
+  }
+
+  &.btn-outlined {
+    @apply text-green-500 bg-white border-green-500;
+
+    &:hover {
+      @apply text-green-700 border-green-700;
+    }
+  }
+  
+  &.btn-outlined-ripple {
+    @apply text-green-600 border-green-600;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      @apply bg-green-700;
+      z-index: -1;
+      scale: 0 1;
+      transform-origin: right;
+      transition: scale .3s ease-in-out;
+    }
+
+    &:hover {
+      @apply text-white border-green-700;
+
+      &::before {
+        scale: 1 1;
+        transform-origin: left;
+      }
+    }
+  }
+}
+
+
+:root {
+    --header-height: 70px;
+    --footer-height: 70px;
+    --primary-color: rgb(215, 107, 29);
+    --primary-text-color: #D9D9D9;
+    --background-linear-color: linear-gradient(180deg, rgba(215, 107, 29, 0.5) 0%, rgba(215, 108, 30, 0.00) 100%);
+
+  }
+
+  
+
+* {
+  @apply p-0 m-0 box-border;
+  color: var(--primary-text-color);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* 
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+} */
